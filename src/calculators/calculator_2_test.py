@@ -8,10 +8,9 @@ class MockRequest:
     def __init__(self, body: Dict) -> None:
         self.json = body
 
-class MockDriverHandler(DriverHandlerInterface):
+class MockDriverHandler():
     def standard_deviation(self, numbers: List[float]) -> float:
         return 3
-
 
 def test_calculate_integration():
     mock_request = MockRequest(body={ "numbers": [1.23, 2.34, 3.45] })
